@@ -8,10 +8,10 @@ import spawn from 'cross-spawn';
 import validateProjectName from 'validate-npm-package-name';
 
 /**
- * Create a new Resilient.js application
+ * Create a new REZILIENT.js application
  */
 export async function createApp(projectName, options = {}) {
-  console.log(chalk.cyan('\n🚀 Creating Resilient.js application...\n'));
+  console.log(chalk.cyan('\n🚀 Creating REZILIENT.js application...\n'));
   
   // Validate project name
   const validation = validateProjectName(projectName);
@@ -165,14 +165,14 @@ async function generateAppFiles(projectPath, template, options) {
  */
 function generateMainApp(template, options) {
   // Only use production-ready features
-  let imports = `import { AetherStore, PersistentStore, SyncEngine, AetherComponent } from 'resilient.js';\n`;
+  let imports = `import { AetherStore, PersistentStore, SyncEngine, AetherComponent } from 'rezilient.js';\n`;
 
   if (options.react) {
-    imports += `import { useAetherStore, useSyncEngine } from 'resilient.js/react';\n`;
+    imports += `import { useAetherStore, useSyncEngine } from 'rezilient.js/react';\n`;
   }
 
   if (options.carbonAware) {
-    imports += `import { CarbonAwareScheduler } from 'resilient.js';\n`;
+    imports += `import { CarbonAwareScheduler } from 'rezilient.js';\n`;
   }
   
   let appClass = `

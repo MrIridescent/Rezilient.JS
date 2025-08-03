@@ -1,5 +1,5 @@
 /**
- * Accessibility (A11y) Tests for Rezilient.js
+ * Accessibility (A11y) Tests for REZILIENT.js
  * Tests WCAG 2.1 AAA compliance and accessibility features
  */
 

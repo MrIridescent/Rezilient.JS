@@ -1,4 +1,4 @@
-# 🌟 Rezilient.js
+# 🌟 REZILIENT.js
 
 > **Revolutionary framework for scaffolding complete production-ready resilient applications**
 
@@ -30,7 +30,7 @@ npx rezilient create my-vanilla vanilla-js
 
 ## ✨ Industry-First Features
 
-Rezilient.js sets new industry standards with revolutionary capabilities:
+REZILIENT.js sets new industry standards with revolutionary capabilities:
 
 ### 🌱 **Real Carbon-Aware Computing** (Industry First - 100% Real)
 - **Live API Integration**: CO2 Signal, UK Grid Carbon, WattTime, Carbon Interface
@@ -276,7 +276,7 @@ console.log('Carbon savings:', carbonMetrics.totalSavings);
 
 ## 🧪 Testing
 
-Rezilient.js includes comprehensive testing utilities:
+REZILIENT.js includes comprehensive testing utilities:
 
 ```javascript
 import { createMockAetherComponent, mockCarbonScheduler } from 'rezilient.js/testing';
@@ -319,9 +319,9 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md).
 
 ## 📄 License
 
-MIT © [Rezilient.js Team](https://github.com/rezilient-js)
+MIT © [REZILIENT.js Team](https://github.com/rezilient-js)
 
-## 🌟 Why Rezilient.js?
+## 🌟 Why REZILIENT.js?
 
 - **🏭 Production-Ready**: Battle-tested in enterprise environments
 - **🌱 Sustainable**: First framework with built-in carbon awareness

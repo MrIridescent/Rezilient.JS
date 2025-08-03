@@ -14,20 +14,20 @@ import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 const packageJson = require('../package.json');
 
-console.log(chalk.cyan('🚀 Resilient.js CLI - Production-Ready Offline-First Framework'));
+console.log(chalk.cyan('🚀 REZILIENT.js CLI - Production-Ready Offline-First Framework'));
 console.log(chalk.gray(`Version ${packageJson.version}`));
 console.log('');
 
 // Set up the CLI program
 program
   .name('resilient')
-  .description('CLI for Resilient.js - Production-Ready Offline-First Framework')
+  .description('CLI for REZILIENT.js - Production-Ready Offline-First Framework')
   .version(packageJson.version);
 
 // Create command
 program
   .command('create <project-name>')
-  .description('Create a new Resilient.js application')
+  .description('Create a new REZILIENT.js application')
   .option('-t, --template <template>', 'Project template', 'basic')
   .option('--offline-first', 'Enable advanced offline-first features')
   .option('--carbon-aware', 'Enable carbon-aware scheduling')

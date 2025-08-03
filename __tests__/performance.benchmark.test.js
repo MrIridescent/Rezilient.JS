@@ -1,5 +1,5 @@
 /**
- * Performance Benchmark Tests for Rezilient.js
+ * Performance Benchmark Tests for REZILIENT.js
  * Tests framework performance under various load conditions
  */
 

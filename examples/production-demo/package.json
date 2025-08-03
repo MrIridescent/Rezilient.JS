@@ -1,7 +1,7 @@
 {
   "name": "resilient-js-production-demo",
   "version": "1.0.0",
-  "description": "Production demo showcasing Resilient.js framework capabilities",
+  "description": "Production demo showcasing REZILIENT.js framework capabilities",
   "type": "module",
   "main": "demo.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "test": "echo 'Demo tests would go here'"
   },
   "dependencies": {
-    "resilient.js": "file:../../"
+    "rezilient.js": "file:../../"
   },
   "keywords": [
     "resilient",
@@ -21,6 +21,6 @@
     "javascript",
     "framework"
   ],
-  "author": "Resilient.js Team",
+  "author": "REZILIENT.js Team",
   "license": "MIT"
 }

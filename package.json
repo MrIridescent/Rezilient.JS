@@ -1,7 +1,7 @@
 {
   "name": "rezilient.js",
   "version": "1.0.0",
-  "description": "Rezilient.js - Revolutionary framework for scaffolding complete production-ready resilient applications. Features offline-first architecture, AI-awareness, carbon-conscious computing, quantum-ready patterns, and self-healing capabilities.",
+  "description": "REZILIENT.js - Revolutionary framework for scaffolding complete production-ready resilient applications. Features offline-first architecture, AI-awareness, carbon-conscious computing, quantum-ready patterns, and self-healing capabilities.",
   "type": "module",
   "main": "dist/rezilient.cjs.js",
   "module": "dist/rezilient.esm.js",

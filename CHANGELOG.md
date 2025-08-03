@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to Rezilient.js will be documented in this file.
+All notable changes to REZILIENT.js will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
@@ -113,7 +113,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### 🚀 Breaking Changes
 
 #### Package Name
-- **BREAKING**: Package renamed from `resilient.js` to `rezilient.js`
+- **BREAKING**: Package renamed from `rezilient.js` to `rezilient.js`
 - Update imports: `import { ... } from 'rezilient.js'`
 
 #### API Changes
@@ -131,14 +131,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 1. **Update Package Name**
    ```bash
-   npm uninstall resilient.js
+   npm uninstall rezilient.js
    npm install rezilient.js
    ```
 
 2. **Update Imports**
    ```javascript
    // Old
-   import { AetherComponent } from 'resilient.js';
+   import { AetherComponent } from 'rezilient.js';
    
    // New
    import { AetherComponent } from 'rezilient.js';
@@ -209,6 +209,6 @@ MIT License - see [LICENSE](./LICENSE) file for details.
 
 ---
 
-**Rezilient.js v2.0.0** - *The Revolutionary Framework That Sets New Industry Standards*
+**REZILIENT.js v2.0.0** - *The Revolutionary Framework That Sets New Industry Standards*
 
 For more information, visit [rezilient.js](https://rezilient.js.org)

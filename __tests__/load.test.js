@@ -1,5 +1,5 @@
 /**
- * Load Testing for Rezilient.js
+ * Load Testing for REZILIENT.js
  * Tests framework performance under heavy concurrent load
  */
 

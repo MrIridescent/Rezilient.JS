@@ -2,7 +2,7 @@
 
 ## **EXECUTIVE OVERVIEW**
 
-**Resilient.js** is a **production-ready JavaScript framework** that solves critical problems in modern web development: unreliable networks, poor offline experiences, and unsustainable computing practices. We've built the **world's first carbon-aware, offline-first framework** that actually works in production today.
+**REZILIENT.js** is a **production-ready JavaScript framework** that solves critical problems in modern web development: unreliable networks, poor offline experiences, and unsustainable computing practices. We've built the **world's first carbon-aware, offline-first framework** that actually works in production today.
 
 ---
 
@@ -44,7 +44,7 @@
 
 ### **What We Built That No One Else Has**
 
-| Feature | Resilient.js | React | Vue | Angular |
+| Feature | REZILIENT.js | React | Vue | Angular |
 |---------|--------------|-------|-----|---------|
 | **Carbon-Aware Scheduling** | ✅ **FIRST** | ❌ | ❌ | ❌ |
 | **True Offline-First** | ✅ **BUILT-IN** | ⚠️ Manual | ⚠️ Manual | ⚠️ Manual |
@@ -162,12 +162,12 @@
 
 ### **Contact Information:**
 - **Demo**: http://localhost:8080 (Live now!)
-- **GitHub**: https://github.com/resilient/resilient.js
-- **NPM**: https://npmjs.com/package/resilient.js
-- **Email**: investors@resilient.js
+- **GitHub**: https://github.com/resilient/rezilient.js
+- **NPM**: https://npmjs.com/package/rezilient.js
+- **Email**: investors@rezilient.js
 
 ---
 
-**Resilient.js - Building the web that works everywhere, for everyone. 🌍**
+**REZILIENT.js - Building the web that works everywhere, for everyone. 🌍**
 
 *Ready for production. Ready for investment. Ready to change how we build web applications.*

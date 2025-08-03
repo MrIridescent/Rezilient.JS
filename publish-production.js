@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Production Publication Script for Rezilient.js
+ * Production Publication Script for REZILIENT.js
  * 
  * This script publishes the framework to npm with production-ready settings,
  * bypassing strict test coverage requirements since the framework is 97% functional
@@ -89,7 +89,7 @@ console.log(`✅ Package: Optimized and verified`);
 // Ask for final confirmation
 console.log('\n🚨 FINAL CONFIRMATION');
 console.log('====================');
-console.log('This will publish Rezilient.js to npm as a public package.');
+console.log('This will publish REZILIENT.js to npm as a public package.');
 console.log('The framework is production-ready with 97% functionality.');
 console.log('');
 

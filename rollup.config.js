@@ -10,7 +10,7 @@ export default [
       file: 'dist/rezilient.esm.js',
       format: 'es',
       sourcemap: true,
-      banner: '/* Rezilient.js v2.0.0 - The Revolutionary Framework */',
+      banner: '/* REZILIENT.js v2.0.0 - The Revolutionary Framework */',
       inlineDynamicImports: true
     },
     external: ['node-fetch'],
@@ -40,7 +40,7 @@ export default [
       format: 'cjs',
       exports: 'named',
       sourcemap: true,
-      banner: '/* Rezilient.js v2.0.0 - The Revolutionary Framework */',
+      banner: '/* REZILIENT.js v2.0.0 - The Revolutionary Framework */',
       inlineDynamicImports: true
     },
     external: ['node-fetch'],
@@ -70,7 +70,7 @@ export default [
       format: 'umd',
       name: 'Rezilient',
       sourcemap: true,
-      banner: '/* Rezilient.js v2.0.0 - The Revolutionary Framework */',
+      banner: '/* REZILIENT.js v2.0.0 - The Revolutionary Framework */',
       inlineDynamicImports: true
     },
     external: ['node-fetch'],

@@ -1,5 +1,5 @@
 /**
- * Production Deployment Tests for Rezilient.js
+ * Production Deployment Tests for REZILIENT.js
  * Tests production readiness, build quality, and deployment scenarios
  */
 

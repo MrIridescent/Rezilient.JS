@@ -1,4 +1,4 @@
-// Production Demo - Resilient.js
+// Production Demo - REZILIENT.js
 // This demo showcases ONLY production-ready features
 
 import {
@@ -273,6 +273,6 @@ window.scheduleTask = () => demo.scheduleTask();
 const demo = new ProductionDemo();
 
 // Show framework info in console
-console.log('🚀 Resilient.js Production Demo');
+console.log('🚀 REZILIENT.js Production Demo');
 console.log('Framework loaded successfully!');
 console.log('Try going offline and adding todos - they will sync when you come back online.');

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Rezilient.js Application Scaffolding CLI
+ * REZILIENT.js Application Scaffolding CLI
  * Creates production-ready resilient applications with all framework features
  */
 
@@ -22,7 +22,7 @@ const TEMPLATES = {
   },
   'vanilla-js': {
     name: 'Vanilla JavaScript',
-    description: 'Pure JavaScript app with all Rezilient.js features',
+    description: 'Pure JavaScript app with all REZILIENT.js features',
     dependencies: [],
     devDependencies: ['vite', 'typescript']
   },
@@ -49,7 +49,7 @@ function createApp(appName, template = 'react-app') {
   const packageJson = {
     name: appName,
     version: '1.0.0',
-    description: `Production-ready resilient application built with Rezilient.js`,
+    description: `Production-ready resilient application built with REZILIENT.js`,
     main: 'src/index.js',
     type: 'module',
     scripts: {
@@ -155,7 +155,7 @@ class App extends AetherComponent {
       <div className="app">
         <header className="app-header">
           <h1>🌟 ${appName}</h1>
-          <p>Built with Rezilient.js - Production Ready & Carbon Aware</p>
+          <p>Built with REZILIENT.js - Production Ready & Carbon Aware</p>
         </header>
         
         <main className="app-main">
@@ -167,7 +167,7 @@ class App extends AetherComponent {
         </main>
         
         <footer className="app-footer">
-          <p>Powered by Rezilient.js Framework</p>
+          <p>Powered by REZILIENT.js Framework</p>
         </footer>
       </div>
     );
@@ -200,7 +200,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
 
-// Initialize Rezilient.js framework with real-world capabilities
+// Initialize REZILIENT.js framework with real-world capabilities
 import { initializeAether } from 'rezilient.js';
 
 initializeAether({
@@ -321,7 +321,7 @@ import { CarbonAwareScheduler, AetherPrinciples } from 'rezilient.js';
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Initialize Rezilient.js for backend
+// Initialize REZILIENT.js for backend
 const scheduler = new CarbonAwareScheduler();
 const principles = new AetherPrinciples();
 
@@ -335,7 +335,7 @@ app.use(async (req, res, next) => {
   
   // Add carbon headers
   res.set('X-Carbon-Intensity', carbonIntensity.toString());
-  res.set('X-Powered-By', 'Rezilient.js');
+  res.set('X-Powered-By', 'REZILIENT.js');
   
   next();
 });
@@ -346,7 +346,7 @@ app.get('/health', (req, res) => {
     status: 'healthy',
     carbonIntensity: req.carbonIntensity,
     timestamp: new Date().toISOString(),
-    framework: 'Rezilient.js v1.0.0'
+    framework: 'REZILIENT.js v1.0.0'
   });
 });
 
@@ -382,7 +382,7 @@ function generateItems() {
 app.listen(port, () => {
   console.log(\`🚀 \${appName} API running on port \${port}\`);
   console.log(\`🌱 Carbon-aware scheduling enabled\`);
-  console.log(\`⚡ Powered by Rezilient.js Framework\`);
+  console.log(\`⚡ Powered by REZILIENT.js Framework\`);
 });`;
 
   fs.writeFileSync(path.join(appPath, 'src', 'server.js'), serverJs);
@@ -445,7 +445,7 @@ export default defineConfig({
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rezilient App</title>
-  <meta name="description" content="Production-ready resilient application built with Rezilient.js" />
+  <meta name="description" content="Production-ready resilient application built with REZILIENT.js" />
 </head>
 <body>
   <div id="root"></div>
@@ -472,7 +472,7 @@ if (command === 'create' && appName) {
   createApp(appName, template);
 } else {
   console.log(`
-🌟 Rezilient.js Application Generator
+🌟 REZILIENT.js Application Generator
 
 Usage:
   npx rezilient.js create <app-name> [template]

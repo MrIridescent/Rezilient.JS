@@ -102,8 +102,8 @@ Bundle size: ~45KB gzipped
 ### **For Technical Investors:**
 ```bash
 # Clone and run tests
-git clone https://github.com/resilient/resilient.js
-cd resilient.js
+git clone https://github.com/resilient/rezilient.js
+cd rezilient.js
 npm install
 npm test
 
@@ -146,7 +146,7 @@ npm test
 **No.** We're the **first carbon-aware framework** with **true offline-first architecture**. Our carbon scheduling alone is worth the investment - no competitor has this.
 
 ### **"How do you compete with React/Vue/Angular?"**
-**We don't compete directly.** We **complement** them. Developers can use Resilient.js **with** React for the offline/carbon features, or **instead of** React for new projects.
+**We don't compete directly.** We **complement** them. Developers can use REZILIENT.js **with** React for the offline/carbon features, or **instead of** React for new projects.
 
 ### **"What's your moat?"**
 **Technical moat**: 2+ years of R&D in carbon-aware computing
@@ -168,20 +168,20 @@ Similar to MongoDB, Elastic, or HashiCorp models.
 ## 📞 **CONTACT FOR INVESTMENT**
 
 ### **Ready to Invest?**
-- **Email**: investors@resilient.js
+- **Email**: investors@rezilient.js
 - **Calendar**: [Schedule 30-min call]
 - **Deck**: Full investor presentation available
 - **Due Diligence**: Technical and financial data room ready
 
 ### **Want to Learn More?**
-- **GitHub**: https://github.com/resilient/resilient.js
-- **NPM**: https://npmjs.com/package/resilient.js  
+- **GitHub**: https://github.com/resilient/rezilient.js
+- **NPM**: https://npmjs.com/package/rezilient.js  
 - **Demo**: http://localhost:8080 (live now!)
 - **Docs**: Complete technical documentation
 
 ---
 
-**🌍 Resilient.js - The framework that works everywhere, for everyone.**
+**🌍 REZILIENT.js - The framework that works everywhere, for everyone.**
 
 **Ready for production. Ready for investment. Ready to change web development.**
 

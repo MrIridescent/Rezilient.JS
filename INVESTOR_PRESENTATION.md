@@ -2,7 +2,7 @@
 
 ## **Executive Summary**
 
-**Rezilient.js** is the world's first principle-driven, AI-aware, carbon-conscious JavaScript framework that introduces **7 industry-first innovations** and is **90% production-ready** with **89.6% test coverage**.
+**REZILIENT.js** is the world's first principle-driven, AI-aware, carbon-conscious JavaScript framework that introduces **7 industry-first innovations** and is **90% production-ready** with **89.6% test coverage**.
 
 ---
 
@@ -61,7 +61,7 @@
 
 | Framework | Carbon-Aware | AI-Aware | Self-Healing | Principle-Driven | Market Share |
 |-----------|--------------|----------|--------------|------------------|--------------|
-| **Rezilient.js** | ✅ | ✅ | ✅ | ✅ | **Target: 2.5%** |
+| **REZILIENT.js** | ✅ | ✅ | ✅ | ✅ | **Target: 2.5%** |
 | React | ❌ | ❌ | ❌ | ❌ | 40.1% |
 | Vue | ❌ | ❌ | ❌ | ❌ | 18.8% |
 | Angular | ❌ | ❌ | ❌ | ❌ | 12.3% |
@@ -239,6 +239,6 @@ const DemoComponent = withErrorBoundary({ enableSelfHealing: true })(
 
 ---
 
-**Rezilient.js** - *Revolutionizing web development with principle-driven, AI-aware, carbon-conscious technology.*
+**REZILIENT.js** - *Revolutionizing web development with principle-driven, AI-aware, carbon-conscious technology.*
 
 *This presentation contains forward-looking statements. Actual results may vary.*

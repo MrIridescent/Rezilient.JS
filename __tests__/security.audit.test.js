@@ -1,5 +1,5 @@
 /**
- * Security Audit Tests for Rezilient.js
+ * Security Audit Tests for REZILIENT.js
  * Tests framework security vulnerabilities and best practices
  */
 

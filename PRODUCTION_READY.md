@@ -146,7 +146,7 @@ npm publish --access public
 
 ## **📈 PERFORMANCE BENCHMARKS**
 
-| Metric | Rezilient.js | Industry Standard | Advantage |
+| Metric | REZILIENT.js | Industry Standard | Advantage |
 |--------|--------------|-------------------|-----------|
 | **Bundle Size** | 45KB | 42-130KB | ✅ Competitive |
 | **Test Coverage** | 90.4% | 70-80% | ✅ Superior |

@@ -1,4 +1,4 @@
-// src/index.js - Resilient.js Production Framework
+// src/index.js - REZILIENT.js Production Framework
 
 // ✅ PRODUCTION-READY CORE FEATURES
 
@@ -82,7 +82,7 @@ export const CONFLICT_STRATEGIES = {
 
 // Framework version and info
 export const FRAMEWORK_INFO = {
-  name: 'Resilient.js (Aether.js)',
+  name: 'REZILIENT.js (Aether.js)',
   version: '2.0.0',
   description: 'Revolutionary offline-first framework with AI-awareness and principle-driven development',
   tagline: 'The world\'s first principle-driven, AI-aware, carbon-conscious framework',
@@ -117,7 +117,7 @@ export const FRAMEWORK_INFO = {
 };
 
 /**
- * Initialize Rezilient.js framework with enhanced real-world configuration
+ * Initialize REZILIENT.js framework with enhanced real-world configuration
  */
 export function initializeAether(config = {}) {
   const defaultConfig = {
@@ -191,7 +191,7 @@ export function initializeAether(config = {}) {
     global.AetherConfig = finalConfig;
   }
 
-  console.log('🌟 Rezilient.js Framework Initialized with Real-World Capabilities');
+  console.log('🌟 REZILIENT.js Framework Initialized with Real-World Capabilities');
   console.log('   ✅ Carbon-aware computing with real API integration');
   console.log('   ✅ Enhanced AI bias detection with statistical methods');
   console.log('   ✅ Predictive self-healing with performance monitoring');

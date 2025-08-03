@@ -1,14 +1,14 @@
-# Resilient.js - Offline-First JavaScript Framework
+# REZILIENT.js - Offline-First JavaScript Framework
 
 > A production-ready JavaScript framework focused on resilience, sustainability, and offline-first development
 
-[![npm version](https://badge.fury.io/js/resilient.js.svg)](https://badge.fury.io/js/resilient.js)
+[![npm version](https://badge.fury.io/js/rezilient.js.svg)](https://badge.fury.io/js/rezilient.js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Tests](https://img.shields.io/badge/tests-101%20passing-brightgreen.svg)](https://github.com/resilient/resilient.js)
+[![Tests](https://img.shields.io/badge/tests-159%20passing-brightgreen.svg)](https://github.com/rezilient/rezilient.js)
 
-## 🌟 What Makes Resilient.js Different?
+## 🌟 What Makes REZILIENT.js Different?
 
-Resilient.js is a modern JavaScript framework built for the real world - where networks are unreliable, users expect instant responses, and sustainability matters. We focus on delivering **proven, production-ready features** that work today.
+REZILIENT.js is a modern JavaScript framework built for the real world - where networks are unreliable, users expect instant responses, and sustainability matters. We focus on delivering **proven, production-ready features** that work today.
 
 ---
 
@@ -71,7 +71,7 @@ These features are included as **experimental previews** and are not recommended
 
 ```bash
 # Install the framework
-npm install resilient.js
+npm install rezilient.js
 
 # Install the CLI (optional)
 npm install -g @resilient/cli
@@ -80,7 +80,7 @@ npm install -g @resilient/cli
 ### Basic Usage
 
 ```javascript
-import { AetherStore, PersistentStore, SyncEngine } from 'resilient.js';
+import { AetherStore, PersistentStore, SyncEngine } from 'rezilient.js';
 
 // Create a resilient store
 const store = new AetherStore({
@@ -106,7 +106,7 @@ store.dispatch({
 ### React Integration
 
 ```javascript
-import { useAetherStore, useSyncEngine } from 'resilient.js/react';
+import { useAetherStore, useSyncEngine } from 'rezilient.js/react';
 
 function TodoApp() {
   const [todos, dispatch] = useAetherStore('todos');
@@ -169,8 +169,8 @@ We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md)
 ### Development Setup
 
 ```bash
-git clone https://github.com/resilient/resilient.js.git
-cd resilient.js
+git clone https://github.com/resilient/rezilient.js.git
+cd rezilient.js
 npm install
 npm test
 ```
@@ -199,4 +199,4 @@ MIT License - see [LICENSE](./LICENSE) file for details.
 
 ---
 
-**Resilient.js** - Building the web that works everywhere, for everyone. 🌍
+**REZILIENT.js** - Building the web that works everywhere, for everyone. 🌍
