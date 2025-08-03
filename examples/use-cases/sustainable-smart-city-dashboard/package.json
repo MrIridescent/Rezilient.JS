@@ -1,0 +1,39 @@
+{
+  "name": "aether-sustainable-smart-city-dashboard",
+  "version": "1.0.0",
+  "description": "Sustainable Smart City Dashboard built with Aether.js - demonstrates ALL 8 Revolutionary Features working together",
+  "type": "module",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "dev": "aether dev",
+    "build": "aether build",
+    "test": "node test/test.js"
+  },
+  "dependencies": {
+    "@aether/framework": "file:../../..",
+    "express": "^4.18.2",
+    "ws": "^8.14.2",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@aether/cli": "file:../../../packages/cli"
+  },
+  "keywords": [
+    "aether",
+    "smart-city",
+    "sustainable",
+    "ai-powered",
+    "biometric-aware",
+    "spatial-computing",
+    "neuromorphic",
+    "quantum-secure",
+    "resilient-first",
+    "carbon-aware",
+    "performance-optimized",
+    "revolutionary",
+    "all-features"
+  ],
+  "author": "Aether.js Team",
+  "license": "MIT"
+}

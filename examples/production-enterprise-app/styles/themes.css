@@ -1,0 +1,320 @@
+/* Theme variations for Aether.js Enterprise Suite */
+
+/* Professional Theme (Default) */
+[data-theme="professional"] {
+  --primary-color: #667eea;
+  --primary-dark: #5a67d8;
+  --primary-light: #7c8aed;
+  --secondary-color: #764ba2;
+  --accent-color: #38a169;
+  --warning-color: #ed8936;
+  --error-color: #e53e3e;
+  
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7fafc;
+  --bg-tertiary: #edf2f7;
+  --text-primary: #2d3748;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+  --border-color: #e2e8f0;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --primary-color: #7c8aed;
+  --primary-dark: #667eea;
+  --primary-light: #9ca3f0;
+  --secondary-color: #8b5fbf;
+  --accent-color: #48bb78;
+  --warning-color: #f6ad55;
+  --error-color: #fc8181;
+  
+  --bg-primary: #1a202c;
+  --bg-secondary: #2d3748;
+  --bg-tertiary: #4a5568;
+  --text-primary: #f7fafc;
+  --text-secondary: #e2e8f0;
+  --text-muted: #a0aec0;
+  --border-color: #4a5568;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* High Contrast Theme */
+[data-theme="high-contrast"] {
+  --primary-color: #0066cc;
+  --primary-dark: #004499;
+  --primary-light: #3388dd;
+  --secondary-color: #6600cc;
+  --accent-color: #009900;
+  --warning-color: #ff6600;
+  --error-color: #cc0000;
+  
+  --bg-primary: #ffffff;
+  --bg-secondary: #f0f0f0;
+  --bg-tertiary: #e0e0e0;
+  --text-primary: #000000;
+  --text-secondary: #333333;
+  --text-muted: #666666;
+  --border-color: #999999;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Eco Theme (Green-focused for sustainability) */
+[data-theme="eco"] {
+  --primary-color: #38a169;
+  --primary-dark: #2f855a;
+  --primary-light: #48bb78;
+  --secondary-color: #319795;
+  --accent-color: #3182ce;
+  --warning-color: #d69e2e;
+  --error-color: #e53e3e;
+  
+  --bg-primary: #f7fafc;
+  --bg-secondary: #edf2f7;
+  --bg-tertiary: #e2e8f0;
+  --text-primary: #1a202c;
+  --text-secondary: #2d3748;
+  --text-muted: #4a5568;
+  --border-color: #cbd5e0;
+  --shadow-color: rgba(56, 161, 105, 0.1);
+}
+
+/* Corporate Theme (Blue-focused) */
+[data-theme="corporate"] {
+  --primary-color: #3182ce;
+  --primary-dark: #2c5aa0;
+  --primary-light: #4299e1;
+  --secondary-color: #553c9a;
+  --accent-color: #38a169;
+  --warning-color: #d69e2e;
+  --error-color: #e53e3e;
+  
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #edf2f7;
+  --text-primary: #1a365d;
+  --text-secondary: #2a4365;
+  --text-muted: #4a5568;
+  --border-color: #e2e8f0;
+  --shadow-color: rgba(49, 130, 206, 0.1);
+}
+
+/* Minimal Theme */
+[data-theme="minimal"] {
+  --primary-color: #4a5568;
+  --primary-dark: #2d3748;
+  --primary-light: #718096;
+  --secondary-color: #718096;
+  --accent-color: #38a169;
+  --warning-color: #ed8936;
+  --error-color: #e53e3e;
+  
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  --bg-tertiary: #f5f5f5;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #8a8a8a;
+  --border-color: #e0e0e0;
+  --shadow-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Theme-specific component overrides */
+
+/* Dark theme specific adjustments */
+[data-theme="dark"] .metric-card {
+  background-color: var(--bg-tertiary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .notification {
+  background-color: var(--bg-tertiary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .install-prompt {
+  background-color: var(--bg-tertiary);
+  border-color: var(--border-color);
+}
+
+/* High contrast theme adjustments */
+[data-theme="high-contrast"] .btn {
+  border-width: 2px;
+  font-weight: 700;
+}
+
+[data-theme="high-contrast"] .status-indicator {
+  border: 2px solid currentColor;
+}
+
+[data-theme="high-contrast"] .progress-fill {
+  background-color: var(--primary-color);
+}
+
+[data-theme="high-contrast"] .task-status {
+  border: 2px solid currentColor;
+}
+
+/* Eco theme adjustments */
+[data-theme="eco"] .carbon-indicator {
+  background-color: rgba(56, 161, 105, 0.1);
+  border-color: var(--primary-color);
+}
+
+[data-theme="eco"] .analytics-card.sustainability {
+  background-color: rgba(56, 161, 105, 0.05);
+  border-color: var(--primary-color);
+}
+
+[data-theme="eco"] .metric-icon {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+/* Corporate theme adjustments */
+[data-theme="corporate"] .logo {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+[data-theme="corporate"] .app-header {
+  background: linear-gradient(90deg, var(--bg-primary), var(--bg-secondary));
+}
+
+[data-theme="corporate"] .metric-card {
+  border-left: 4px solid var(--primary-color);
+}
+
+/* Minimal theme adjustments */
+[data-theme="minimal"] .metric-card {
+  box-shadow: none;
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="minimal"] .project-card-detailed {
+  box-shadow: none;
+  border: 1px solid var(--border-color);
+}
+
+[data-theme="minimal"] .notification {
+  box-shadow: 0 2px 4px var(--shadow-color);
+}
+
+[data-theme="minimal"] .btn {
+  box-shadow: none;
+}
+
+[data-theme="minimal"] .status-indicator {
+  background-color: transparent;
+  border: 1px solid currentColor;
+}
+
+/* Theme transition animations */
+* {
+  transition: 
+    background-color var(--transition-normal),
+    border-color var(--transition-normal),
+    color var(--transition-normal);
+}
+
+/* Accessibility improvements for all themes */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-color: #7c8aed;
+    --primary-dark: #667eea;
+    --primary-light: #9ca3f0;
+    --secondary-color: #8b5fbf;
+    --accent-color: #48bb78;
+    --warning-color: #f6ad55;
+    --error-color: #fc8181;
+    
+    --bg-primary: #1a202c;
+    --bg-secondary: #2d3748;
+    --bg-tertiary: #4a5568;
+    --text-primary: #f7fafc;
+    --text-secondary: #e2e8f0;
+    --text-muted: #a0aec0;
+    --border-color: #4a5568;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Print styles */
+@media print {
+  .app-header,
+  .app-sidebar,
+  .app-footer,
+  .notifications-container,
+  .offline-indicator,
+  .carbon-indicator,
+  .performance-monitor,
+  .install-prompt {
+    display: none !important;
+  }
+  
+  .enterprise-app {
+    grid-template-areas: "main";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+  
+  .app-main {
+    padding: 0;
+    background: white;
+    color: black;
+  }
+  
+  .metric-card,
+  .project-card-detailed,
+  .analytics-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+}
+
+/* Focus styles for accessibility */
+.btn:focus,
+.nav-item:focus,
+.sidebar-action:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --border-color: #000000;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .btn {
+    border-width: 2px;
+  }
+  
+  .status-indicator {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Reduced transparency for better readability */
+@media (prefers-reduced-transparency: reduce) {
+  .notification,
+  .install-prompt,
+  .carbon-indicator,
+  .performance-monitor {
+    background-color: var(--bg-primary);
+    backdrop-filter: none;
+  }
+}

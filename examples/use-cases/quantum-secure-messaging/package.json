@@ -1,0 +1,33 @@
+{
+  "name": "aether-quantum-secure-messaging",
+  "version": "1.0.0",
+  "description": "Quantum-Secure Messaging Platform built with Aether.js - demonstrates Quantum Computing and Resilient-First capabilities",
+  "type": "module",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "dev": "aether dev",
+    "build": "aether build",
+    "test": "node test/test.js"
+  },
+  "dependencies": {
+    "@aether/framework": "file:../../..",
+    "express": "^4.18.2",
+    "ws": "^8.14.2",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@aether/cli": "file:../../../packages/cli"
+  },
+  "keywords": [
+    "aether",
+    "quantum-computing",
+    "quantum-encryption",
+    "resilient-first",
+    "secure-messaging",
+    "post-quantum-cryptography",
+    "revolutionary"
+  ],
+  "author": "Aether.js Team",
+  "license": "MIT"
+}

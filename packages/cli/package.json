@@ -1,0 +1,55 @@
+{
+  "name": "@aether/cli",
+  "version": "2.0.0",
+  "description": "CLI tools for Aether.js framework",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "aether": "bin/aether.js",
+    "create-aether-app": "bin/create-aether-app.js"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "templates"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "jest"
+  },
+  "keywords": [
+    "aether",
+    "cli",
+    "framework",
+    "scaffolding",
+    "development"
+  ],
+  "author": "Aether Framework Team",
+  "license": "MIT",
+  "dependencies": {
+    "@aether/framework": "file:../../",
+    "commander": "^9.4.1",
+    "inquirer": "^9.1.4",
+    "chalk": "^5.2.0",
+    "ora": "^6.1.2",
+    "fs-extra": "^11.1.0",
+    "cross-spawn": "^7.0.3",
+    "semver": "^7.3.8",
+    "validate-npm-package-name": "^5.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-json": "^6.0.0",
+    "rollup": "^3.10.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aether-framework/aether.git",
+    "directory": "packages/cli"
+  }
+}

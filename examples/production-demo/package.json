@@ -1,0 +1,26 @@
+{
+  "name": "resilient-js-production-demo",
+  "version": "1.0.0",
+  "description": "Production demo showcasing Resilient.js framework capabilities",
+  "type": "module",
+  "main": "demo.js",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "dev": "python3 -m http.server 8080",
+    "build": "echo 'Demo is ready to serve'",
+    "test": "echo 'Demo tests would go here'"
+  },
+  "dependencies": {
+    "resilient.js": "file:../../"
+  },
+  "keywords": [
+    "resilient",
+    "offline-first",
+    "demo",
+    "production",
+    "javascript",
+    "framework"
+  ],
+  "author": "Resilient.js Team",
+  "license": "MIT"
+}

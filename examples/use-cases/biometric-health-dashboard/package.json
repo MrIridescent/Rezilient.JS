@@ -1,0 +1,32 @@
+{
+  "name": "aether-biometric-health-dashboard",
+  "version": "1.0.0",
+  "description": "Biometric Health Dashboard built with Aether.js - demonstrates Biometric-Aware and Carbon-Aware capabilities",
+  "type": "module",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "dev": "aether dev",
+    "build": "aether build",
+    "test": "node test/test.js"
+  },
+  "dependencies": {
+    "@aether/framework": "file:../../..",
+    "express": "^4.18.2",
+    "ws": "^8.14.2",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@aether/cli": "file:../../../packages/cli"
+  },
+  "keywords": [
+    "aether",
+    "biometric",
+    "health",
+    "wellness",
+    "carbon-aware",
+    "revolutionary"
+  ],
+  "author": "Aether.js Team",
+  "license": "MIT"
+}

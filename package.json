@@ -1,0 +1,100 @@
+{
+  "name": "rezilient.js",
+  "version": "1.0.0",
+  "description": "Rezilient.js - Revolutionary framework for scaffolding complete production-ready resilient applications. Features offline-first architecture, AI-awareness, carbon-conscious computing, quantum-ready patterns, and self-healing capabilities.",
+  "type": "module",
+  "main": "dist/rezilient.cjs.js",
+  "module": "dist/rezilient.esm.js",
+  "browser": "dist/rezilient.umd.js",
+  "types": "types/index.d.ts",
+  "bin": {
+    "rezilient": "./bin/rezilient-create.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/rezilient.esm.js",
+      "require": "./dist/rezilient.cjs.js",
+      "types": "./types/index.d.ts"
+    },
+    "./core": {
+      "import": "./src/core/index.js",
+      "types": "./types/core/index.d.ts"
+    },
+    "./hooks": {
+      "import": "./src/hooks/index.js",
+      "types": "./types/hooks/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "types",
+    "src"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "build:types": "node scripts/generate-types.js",
+    "test": "jest",
+    "test:ci": "jest --ci --coverage --watchAll=false",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "test:performance": "jest performance.benchmark.test.js --verbose",
+    "test:security": "jest security.audit.test.js --verbose",
+    "test:accessibility": "jest accessibility.test.js --verbose",
+    "test:load": "jest load.test.js --verbose",
+    "test:production": "jest production.deployment.test.js --verbose",
+    "test:all-benchmarks": "npm run test:performance && npm run test:security && npm run test:accessibility && npm run test:load && npm run test:production",
+    "dev": "rollup -c -w",
+    "prepublishOnly": "npm run test:ci && npm run build",
+    "publish:npm": "npm publish --access public",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint src/**/*.js --fix",
+    "prepare": "npm run build",
+    "docs": "jsdoc -c jsdoc.conf.json",
+    "benchmark": "npm run test:all-benchmarks",
+    "demo": "node examples/demo.js"
+  },
+  "keywords": [
+    "framework",
+    "javascript",
+    "scaffolding",
+    "production-ready",
+    "offline-first",
+    "carbon-aware",
+    "ai-aware",
+    "principle-driven",
+    "self-healing",
+    "quantum-ready",
+    "bias-detection",
+    "accessibility-first",
+    "sync",
+    "resilient",
+    "state-management",
+    "react",
+    "progressive-web-app",
+    "revolutionary",
+    "sustainability",
+    "green-software",
+    "ethical-ai",
+    "application-generator",
+    "boilerplate"
+  ],
+  "author": "Aether Framework Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@rollup/plugin-commonjs": "^28.0.6",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "fake-indexeddb": "^6.0.1",
+    "jest": "^30.0.5",
+    "jest-environment-jsdom": "^30.0.5",
+    "jsdom": "^26.1.0",
+    "rollup": "^2.79.2",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "terser": "^5.43.1"
+  },
+  "dependencies": {
+    "idb-keyval": "^6.2.2"
+  }
+}

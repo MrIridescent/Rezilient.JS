@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧠 AI-Powered Code Assistant | Aether.js</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 2rem;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .demo-section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+        
+        .code-editor {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .editor-panel {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        .editor-header {
+            background: #f7fafc;
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #e2e8f0;
+            font-weight: 600;
+            color: #4a5568;
+        }
+        
+        .editor-content {
+            height: 300px;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 100%;
+            border: none;
+            padding: 1rem;
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+            font-size: 14px;
+            resize: none;
+            outline: none;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        button:hover {
+            background: #5a67d8;
+        }
+        
+        button:disabled {
+            background: #a0aec0;
+            cursor: not-allowed;
+        }
+        
+        .status {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .status-item {
+            background: #f7fafc;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            border-left: 4px solid #667eea;
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .metric-card {
+            background: #f7fafc;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .metric-label {
+            font-size: 0.9rem;
+            color: #4a5568;
+            margin-top: 0.25rem;
+        }
+        
+        .results {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #f7fafc;
+            border-radius: 8px;
+            border-left: 4px solid #38a169;
+        }
+        
+        .error {
+            border-left-color: #e53e3e;
+            background: #fed7d7;
+        }
+        
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .connection-status {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .connected {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+        
+        .disconnected {
+            background: #fed7d7;
+            color: #742a2a;
+        }
+        
+        @media (max-width: 768px) {
+            .code-editor {
+                grid-template-columns: 1fr;
+            }
+            
+            .controls {
+                justify-content: center;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="connection-status" id="connectionStatus">
+        🔌 Connecting...
+    </div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>🧠 AI-Powered Code Assistant</h1>
+            <p>Revolutionary code analysis, generation, and optimization powered by Aether.js</p>
+        </div>
+        
+        <div class="features">
+            <div class="feature-card">
+                <h3>🎯 Intelligent Code Generation</h3>
+                <p>Generate production-ready code from natural language descriptions using advanced AI models.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔍 Real-time Code Analysis</h3>
+                <p>Get instant feedback on code quality, performance, and security with Edge-AI processing.</p>
+            </div>
+            <div class="feature-card">
+                <h3>⚡ Performance Optimization</h3>
+                <p>Automatically optimize code for performance, memory usage, and energy efficiency.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🌱 Carbon-Aware Processing</h3>
+                <p>Schedule intensive operations during optimal renewable energy availability.</p>
+            </div>
+        </div>
+        
+        <div class="demo-section">
+            <h2>🚀 Try the AI Code Assistant</h2>
+            
+            <div class="controls">
+                <button onclick="analyzeCode()">🔍 Analyze Code</button>
+                <button onclick="generateCode()">🎯 Generate Code</button>
+                <button onclick="optimizeCode()">⚡ Optimize Code</button>
+                <button onclick="clearResults()">🧹 Clear</button>
+            </div>
+            
+            <div class="status">
+                <div class="status-item">
+                    <strong>AI Status:</strong> <span id="aiStatus">Ready</span>
+                </div>
+                <div class="status-item">
+                    <strong>Carbon Optimal:</strong> <span id="carbonStatus">Checking...</span>
+                </div>
+                <div class="status-item">
+                    <strong>Processing:</strong> <span id="processingStatus">Idle</span>
+                </div>
+            </div>
+            
+            <div class="code-editor">
+                <div class="editor-panel">
+                    <div class="editor-header">📝 Input Code / Prompt</div>
+                    <div class="editor-content">
+                        <textarea id="inputCode" placeholder="Enter your code here or describe what you want to generate...
+
+Example for generation:
+'Create a React component that displays a user profile with avatar, name, and bio'
+
+Example for analysis:
+function fibonacci(n) {
+  if (n <= 1) return n;
+  return fibonacci(n-1) + fibonacci(n-2);
+}"></textarea>
+                    </div>
+                </div>
+                
+                <div class="editor-panel">
+                    <div class="editor-header">✨ AI Results</div>
+                    <div class="editor-content">
+                        <textarea id="outputCode" placeholder="AI-generated code, analysis results, or optimizations will appear here..." readonly></textarea>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="metrics">
+                <div class="metric-card">
+                    <div class="metric-value" id="analysisTime">0ms</div>
+                    <div class="metric-label">Analysis Time</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" id="carbonSaved">0g</div>
+                    <div class="metric-label">CO₂ Saved</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" id="performanceGain">0%</div>
+                    <div class="metric-label">Performance Gain</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value" id="codeQuality">0%</div>
+                    <div class="metric-label">Code Quality</div>
+                </div>
+            </div>
+            
+            <div id="results" class="results" style="display: none;">
+                <h3>📊 Analysis Results</h3>
+                <div id="resultsContent"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let ws = null;
+        let isConnected = false;
+        
+        // Initialize WebSocket connection
+        function initWebSocket() {
+            try {
+                ws = new WebSocket('ws://localhost:3002');
+                
+                ws.onopen = function() {
+                    isConnected = true;
+                    updateConnectionStatus('connected');
+                    console.log('🔌 Connected to AI Code Assistant');
+                };
+                
+                ws.onmessage = function(event) {
+                    const message = JSON.parse(event.data);
+                    handleWebSocketMessage(message);
+                };
+                
+                ws.onclose = function() {
+                    isConnected = false;
+                    updateConnectionStatus('disconnected');
+                    console.log('🔌 Disconnected from AI Code Assistant');
+                    
+                    // Attempt to reconnect after 3 seconds
+                    setTimeout(initWebSocket, 3000);
+                };
+                
+                ws.onerror = function(error) {
+                    console.error('WebSocket error:', error);
+                    updateConnectionStatus('error');
+                };
+                
+            } catch (error) {
+                console.error('Failed to initialize WebSocket:', error);
+                updateConnectionStatus('error');
+            }
+        }
+        
+        function updateConnectionStatus(status) {
+            const statusElement = document.getElementById('connectionStatus');
+            
+            switch (status) {
+                case 'connected':
+                    statusElement.textContent = '🟢 Connected';
+                    statusElement.className = 'connection-status connected';
+                    break;
+                case 'disconnected':
+                    statusElement.textContent = '🔴 Disconnected';
+                    statusElement.className = 'connection-status disconnected';
+                    break;
+                case 'error':
+                    statusElement.textContent = '⚠️ Connection Error';
+                    statusElement.className = 'connection-status disconnected';
+                    break;
+                default:
+                    statusElement.textContent = '🔌 Connecting...';
+                    statusElement.className = 'connection-status';
+            }
+        }
+        
+        function handleWebSocketMessage(message) {
+            const { type, data } = message;
+            
+            switch (type) {
+                case 'welcome':
+                    console.log('Welcome message:', message.message);
+                    document.getElementById('aiStatus').textContent = 'Connected';
+                    break;
+                    
+                case 'real-time-analysis-result':
+                    handleAnalysisResult(data);
+                    break;
+                    
+                case 'code-completion-result':
+                    handleCodeCompletion(data);
+                    break;
+                    
+                case 'performance-update':
+                    updateMetrics(data);
+                    break;
+                    
+                case 'error':
+                    showError(message.error);
+                    break;
+            }
+        }
+        
+        async function analyzeCode() {
+            const code = document.getElementById('inputCode').value.trim();
+            if (!code) {
+                alert('Please enter some code to analyze');
+                return;
+            }
+            
+            setProcessingStatus('Analyzing code...');
+            
+            try {
+                const response = await fetch('/api/analyze', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        code,
+                        language: 'javascript',
+                        projectId: 'demo-project'
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    displayAnalysisResults(result.analysis);
+                    updateCarbonStatus(result.carbonOptimal);
+                } else {
+                    showError(result.error);
+                }
+                
+            } catch (error) {
+                showError('Failed to analyze code: ' + error.message);
+            } finally {
+                setProcessingStatus('Idle');
+            }
+        }
+        
+        async function generateCode() {
+            const prompt = document.getElementById('inputCode').value.trim();
+            if (!prompt) {
+                alert('Please enter a description of what you want to generate');
+                return;
+            }
+            
+            setProcessingStatus('Generating code...');
+            
+            try {
+                const response = await fetch('/api/generate', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        prompt,
+                        language: 'javascript',
+                        context: 'web-application',
+                        projectId: 'demo-project'
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    document.getElementById('outputCode').value = result.code;
+                    displayGenerationResults(result);
+                } else {
+                    showError(result.error);
+                }
+                
+            } catch (error) {
+                showError('Failed to generate code: ' + error.message);
+            } finally {
+                setProcessingStatus('Idle');
+            }
+        }
+        
+        async function optimizeCode() {
+            const code = document.getElementById('inputCode').value.trim();
+            if (!code) {
+                alert('Please enter some code to optimize');
+                return;
+            }
+            
+            setProcessingStatus('Optimizing code...');
+            
+            try {
+                const response = await fetch('/api/optimize', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        code,
+                        language: 'javascript',
+                        optimizationType: 'performance',
+                        projectId: 'demo-project'
+                    })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    document.getElementById('outputCode').value = result.optimizedCode;
+                    displayOptimizationResults(result);
+                } else {
+                    showError(result.error);
+                }
+                
+            } catch (error) {
+                showError('Failed to optimize code: ' + error.message);
+            } finally {
+                setProcessingStatus('Idle');
+            }
+        }
+        
+        function displayAnalysisResults(analysis) {
+            const resultsDiv = document.getElementById('results');
+            const contentDiv = document.getElementById('resultsContent');
+            
+            contentDiv.innerHTML = `
+                <h4>📊 Code Quality Analysis</h4>
+                <p><strong>Overall Score:</strong> ${analysis.overall || 'N/A'}</p>
+                <p><strong>Performance:</strong> ${analysis.performance?.score || 'N/A'}/100</p>
+                <p><strong>Security:</strong> ${analysis.security?.score || 'N/A'}/100</p>
+                <p><strong>Maintainability:</strong> ${analysis.maintainability?.score || 'N/A'}/100</p>
+                
+                ${analysis.recommendations ? `
+                <h4>💡 Recommendations</h4>
+                <ul>
+                    ${analysis.recommendations.map(rec => `
+                        <li><strong>${rec.type}:</strong> ${rec.message}</li>
+                    `).join('')}
+                </ul>
+                ` : ''}
+                
+                ${analysis.carbonImpact ? `
+                <h4>🌱 Carbon Impact</h4>
+                <p><strong>Estimated Footprint:</strong> ${analysis.carbonImpact.carbonFootprint} ${analysis.carbonImpact.unit}</p>
+                <p><strong>Execution Time:</strong> ${analysis.carbonImpact.estimatedExecutionTime}ms</p>
+                ` : ''}
+            `;
+            
+            resultsDiv.style.display = 'block';
+            resultsDiv.className = 'results';
+            
+            // Update metrics
+            document.getElementById('codeQuality').textContent = (analysis.overall || 0) + '%';
+            document.getElementById('analysisTime').textContent = '150ms'; // Simulated
+        }
+        
+        function displayGenerationResults(result) {
+            const resultsDiv = document.getElementById('results');
+            const contentDiv = document.getElementById('resultsContent');
+            
+            contentDiv.innerHTML = `
+                <h4>🎯 Code Generation Results</h4>
+                <p><strong>Generated:</strong> ${result.code.split('\n').length} lines of code</p>
+                <p><strong>Language:</strong> JavaScript</p>
+                
+                ${result.suggestions ? `
+                <h4>💡 AI Suggestions</h4>
+                <ul>
+                    ${result.suggestions.map(suggestion => `
+                        <li>${suggestion}</li>
+                    `).join('')}
+                </ul>
+                ` : ''}
+            `;
+            
+            resultsDiv.style.display = 'block';
+            resultsDiv.className = 'results';
+        }
+        
+        function displayOptimizationResults(result) {
+            const resultsDiv = document.getElementById('results');
+            const contentDiv = document.getElementById('resultsContent');
+            
+            contentDiv.innerHTML = `
+                <h4>⚡ Optimization Results</h4>
+                <p><strong>Size Reduction:</strong> ${result.improvements.sizeReduction}%</p>
+                <p><strong>Performance Gain:</strong> ${result.improvements.estimatedPerformanceGain.toFixed(1)}%</p>
+                <p><strong>Readability Score:</strong> ${result.improvements.readabilityScore.toFixed(1)}/100</p>
+                
+                <h4>🌱 Carbon Savings</h4>
+                <p><strong>CO₂ Saved:</strong> ${result.improvements.carbonSavings.savings} ${result.improvements.carbonSavings.unit}</p>
+                <p><strong>Reduction:</strong> ${result.improvements.carbonSavings.percentage}%</p>
+            `;
+            
+            resultsDiv.style.display = 'block';
+            resultsDiv.className = 'results';
+            
+            // Update metrics
+            document.getElementById('performanceGain').textContent = result.improvements.estimatedPerformanceGain.toFixed(1) + '%';
+            document.getElementById('carbonSaved').textContent = result.improvements.carbonSavings.savings + 'g';
+        }
+        
+        function setProcessingStatus(status) {
+            document.getElementById('processingStatus').textContent = status;
+        }
+        
+        function updateCarbonStatus(isOptimal) {
+            document.getElementById('carbonStatus').textContent = isOptimal ? '🟢 Optimal' : '🟡 Suboptimal';
+        }
+        
+        function showError(error) {
+            const resultsDiv = document.getElementById('results');
+            const contentDiv = document.getElementById('resultsContent');
+            
+            contentDiv.innerHTML = `
+                <h4>❌ Error</h4>
+                <p>${error}</p>
+            `;
+            
+            resultsDiv.style.display = 'block';
+            resultsDiv.className = 'results error';
+        }
+        
+        function clearResults() {
+            document.getElementById('inputCode').value = '';
+            document.getElementById('outputCode').value = '';
+            document.getElementById('results').style.display = 'none';
+            
+            // Reset metrics
+            document.getElementById('analysisTime').textContent = '0ms';
+            document.getElementById('carbonSaved').textContent = '0g';
+            document.getElementById('performanceGain').textContent = '0%';
+            document.getElementById('codeQuality').textContent = '0%';
+        }
+        
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 AI Code Assistant UI loaded');
+            initWebSocket();
+            
+            // Check carbon status periodically
+            setInterval(async () => {
+                try {
+                    const response = await fetch('/api/metrics');
+                    const data = await response.json();
+                    if (data.success) {
+                        updateCarbonStatus(data.carbon.isOptimal);
+                    }
+                } catch (error) {
+                    console.error('Failed to fetch metrics:', error);
+                }
+            }, 10000);
+        });
+    </script>
+</body>
+</html>
