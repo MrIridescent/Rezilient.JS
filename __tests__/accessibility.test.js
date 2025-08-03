@@ -20,19 +20,19 @@ describe('Accessibility Tests', () => {
           super();
           this.state = { focused: false, selected: null };
         }
-        
+
         handleKeyDown(event) {
           const { key } = event;
           switch (key) {
             case 'Enter':
             case ' ':
-              this.setState({ selected: 'activated' });
+              this.state = { ...this.state, selected: 'activated' };
               break;
             case 'Tab':
-              this.setState({ focused: true });
+              this.state = { ...this.state, focused: true };
               break;
             case 'Escape':
-              this.setState({ focused: false, selected: null });
+              this.state = { ...this.state, focused: false, selected: null };
               break;
           }
         }
@@ -174,9 +174,10 @@ describe('Accessibility Tests', () => {
         }
         
         announce(message, priority = 'polite') {
-          this.setState({
+          this.state = {
+            ...this.state,
             announcements: [...this.state.announcements, { message, priority, timestamp: Date.now() }]
-          });
+          };
         }
         
         render() {
@@ -324,17 +325,19 @@ describe('Accessibility Tests', () => {
         }
         
         openModal() {
-          this.setState({ 
+          this.state = {
+            ...this.state,
             modalOpen: true,
             focusedElement: 'modal-close-button'
-          });
+          };
         }
-        
+
         closeModal() {
-          this.setState({ 
+          this.state = {
+            ...this.state,
             modalOpen: false,
             focusedElement: 'open-modal-button'
-          });
+          };
         }
         
         render() {

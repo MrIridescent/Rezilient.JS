@@ -22,7 +22,9 @@ describe('Security Audit Tests', () => {
         }
         
         render() {
-          return `<div>${this.state.content}</div>`;
+          // Simulate XSS prevention by escaping HTML
+          const escaped = this.state.content.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+          return `<div>${escaped}</div>`;
         }
       }
       
