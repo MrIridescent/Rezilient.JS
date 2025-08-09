@@ -2,7 +2,8 @@
 
 > **Revolutionary framework for scaffolding complete production-ready REZILIENT applications**
 
-[![npm version](https://badge.fury.io/js/rezilient.js.svg)](https://www.npmjs.com/package/rezilient.js)
+[![npm version](https://img.shields.io/npm/v/rezilient.js.svg)](https://www.npmjs.com/package/rezilient.js)
+[![license](https://img.shields.io/npm/l/rezilient.js.svg)](https://github.com/MrIridescent/Rezilient.JS/blob/main/LICENSE)
 [![Publish Status](https://github.com/MrIridescent/Rezilient.JS/actions/workflows/publish.yml/badge.svg?branch=main)](https://github.com/MrIridescent/Rezilient.JS/actions/workflows/publish.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Carbon Aware](https://img.shields.io/badge/carbon-aware-green.svg)](https://www.co2signal.com/)

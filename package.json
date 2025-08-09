@@ -45,7 +45,6 @@
     "test:all-benchmarks": "npm run test:performance && npm run test:security && npm run test:accessibility && npm run test:load && npm run test:production",
     "dev": "rollup -c -w",
     "prepublishOnly": "npm run test:ci && npm run build",
-    "publish:npm": "npm publish --access public",
     "lint": "eslint src/**/*.js",
     "lint:fix": "eslint src/**/*.js --fix",
     "prepare": "npm run build",
@@ -108,5 +107,16 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "release": {
+    "branches": ["main"],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      ["@semantic-release/changelog", {"changelogFile": "CHANGELOG.md"}],
+      ["@semantic-release/npm", {"npmPublish": true}],
+      ["@semantic-release/github", {"assets": []}],
+      ["@semantic-release/git", {"assets": ["CHANGELOG.md", "package.json"]}]
+    ]
   }
 }
