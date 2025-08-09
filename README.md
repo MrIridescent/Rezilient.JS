@@ -3,9 +3,11 @@
 > **Revolutionary framework for scaffolding complete production-ready REZILIENT applications**
 
 [![npm version](https://img.shields.io/npm/v/rezilient.js.svg)](https://www.npmjs.com/package/rezilient.js)
-[![license](https://img.shields.io/npm/l/rezilient.js.svg)](https://github.com/MrIridescent/Rezilient.JS/blob/main/LICENSE)
-[![Publish Status](https://github.com/MrIridescent/Rezilient.JS/actions/workflows/publish.yml/badge.svg?branch=main)](https://github.com/MrIridescent/Rezilient.JS/actions/workflows/publish.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![npm downloads](https://img.shields.io/npm/dm/rezilient.js.svg)](https://www.npmjs.com/package/rezilient.js)
+[![GitHub release](https://img.shields.io/github/v/release/MrIridescent/Rezilient.JS?display_name=tag&sort=semver)](https://github.com/MrIridescent/Rezilient.JS/releases)
+[![Release CI](https://github.com/MrIridescent/Rezilient.JS/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/MrIridescent/Rezilient.JS/actions/workflows/release.yml)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/rezilient.js)](https://bundlephobia.com/package/rezilient.js)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/MrIridescent/Rezilient.JS/blob/main/LICENSE)
 [![Carbon Aware](https://img.shields.io/badge/carbon-aware-green.svg)](https://www.co2signal.com/)
 [![AI Ethics](https://img.shields.io/badge/AI-bias%20detection-blue.svg)](https://fairlearn.org/)
 [![Quantum Ready](https://img.shields.io/badge/quantum-ready-purple.svg)](https://quantum-computing.ibm.com/)
