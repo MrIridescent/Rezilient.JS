@@ -3,8 +3,7 @@
 > **Revolutionary framework for scaffolding complete production-ready REZILIENT applications**
 
 [![npm version](https://badge.fury.io/js/rezilient.js.svg)](https://www.npmjs.com/package/rezilient.js)
-[![Build Status](https://github.com/rezilient-js/rezilient.js/workflows/CI/badge.svg)](https://github.com/rezilient-js/rezilient.js/actions)
-[![Coverage Status](https://coveralls.io/repos/github/rezilient-js/rezilient.js/badge.svg?branch=main)](https://coveralls.io/github/rezilient-js/rezilient.js?branch=main)
+[![Publish Status](https://github.com/MrIridescent/Rezilient.JS/actions/workflows/publish.yml/badge.svg?branch=master)](https://github.com/MrIridescent/Rezilient.JS/actions/workflows/publish.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Carbon Aware](https://img.shields.io/badge/carbon-aware-green.svg)](https://www.co2signal.com/)
 [![AI Ethics](https://img.shields.io/badge/AI-bias%20detection-blue.svg)](https://fairlearn.org/)
