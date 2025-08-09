@@ -1,6 +1,6 @@
 # 🌟 REZILIENT.js
 
-> **Revolutionary framework for scaffolding complete production-ready resilient applications**
+> **Revolutionary framework for scaffolding complete production-ready REZILIENT applications**
 
 [![npm version](https://badge.fury.io/js/rezilient.js.svg)](https://www.npmjs.com/package/rezilient.js)
 [![Build Status](https://github.com/rezilient-js/rezilient.js/workflows/CI/badge.svg)](https://github.com/rezilient-js/rezilient.js/actions)
@@ -15,7 +15,7 @@
 
 ## 🚀 Quick Start - Scaffold Complete Applications
 
-Create a production-ready resilient application in seconds:
+Create a production-ready REZILIENT application in seconds:
 
 ```bash
 # Create a new React app
@@ -107,7 +107,7 @@ class MyApp extends AetherComponent {
   render() {
     return (
       <div>
-        <h1>My Resilient App</h1>
+        <h1>My REZILIENT App</h1>
         <p>Online: {this.isOnline ? '✅' : '❌'}</p>
       </div>
     );
@@ -153,7 +153,7 @@ app.get('/api/data', async (req, res) => {
 
 ## 🎯 Core Components
 
-### AetherStore - Resilient State Management
+### AetherStore - REZILIENT State Management
 ```javascript
 import { AetherStore } from 'rezilient.js';
 
@@ -328,7 +328,7 @@ MIT © [REZILIENT.js Team](https://github.com/rezilient-js)
 - **🔮 Future-Proof**: Quantum-ready architecture
 - **♿ Inclusive**: Accessibility-first design
 - **🧠 Intelligent**: AI-powered bias detection
-- **📱 Resilient**: Offline-first, self-healing capabilities
+- **📱 REZILIENT**: Offline-first, self-healing capabilities
 
 ---
 

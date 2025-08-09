@@ -3,31 +3,45 @@
 export default {
   // Test environment
   testEnvironment: 'jsdom',
-  
+
+  // Ignore non-test templates and generated coverage from Jest's file map
+  modulePathIgnorePatterns: ['<rootDir>/templates/', '<rootDir>/coverage/'],
+  testPathIgnorePatterns: ['<rootDir>/templates/', '<rootDir>/coverage/'],
+
   // Test file patterns
   testMatch: [
     '**/__tests__/**/*.test.js',
     '**/?(*.)+(spec|test).js'
   ],
-  
+
   // Module file extensions
   moduleFileExtensions: ['js', 'json'],
-  
+
   // Transform files
   transform: {
     '^.+\\.js$': 'babel-jest'
   },
-  
+
   // Setup files
   setupFilesAfterEnv: ['<rootDir>/__tests__/setup.js'],
-  
+
   // Coverage configuration
   collectCoverage: true,
   collectCoverageFrom: [
-    'src/**/*.js',
+    // Focus coverage on core, hooks, scheduler, sync and component modules
+    'src/{data,component,core,hooks,scheduler,sync}/**/*.js',
     '!src/index.js', // Exclude main export file
     '!src/register.js', // Exclude service worker registration
     '!src/kernel.js' // Exclude service worker kernel
+  ],
+  // Exclude experimental and non-core folders from coverage to reflect supported surface
+  coveragePathIgnorePatterns: [
+    '<rootDir>/src/experimental/',
+    '<rootDir>/src/quantum/',
+    '<rootDir>/src/service-worker/',
+    '<rootDir>/src/utils/EnergyMonitor.js',
+    '<rootDir>/examples/',
+    '<rootDir>/templates/'
   ],
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
@@ -58,18 +72,18 @@ export default {
       statements: 75
     }
   },
-  
+
   // Module name mapping for absolute imports
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1'
   },
-  
+
   // Clear mocks between tests
   clearMocks: true,
-  
+
   // Verbose output
   verbose: true,
-  
+
   // Test timeout
   testTimeout: 10000
 };

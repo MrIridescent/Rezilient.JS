@@ -74,7 +74,7 @@ These features are included as **experimental previews** and are not recommended
 npm install rezilient.js
 
 # Install the CLI (optional)
-npm install -g @resilient/cli
+npm install -g @rezilient/cli
 ```
 
 ### Basic Usage
@@ -82,7 +82,7 @@ npm install -g @resilient/cli
 ```javascript
 import { AetherStore, PersistentStore, SyncEngine } from 'rezilient.js';
 
-// Create a resilient store
+// Create a REZILIENT store
 const store = new AetherStore({
   todos: []
 });
@@ -138,7 +138,7 @@ function TodoApp() {
 
 ```bash
 # Create a new project
-resilient create my-app
+rezilient create my-app
 
 # Start development server
 resilient dev

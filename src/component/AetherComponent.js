@@ -186,6 +186,17 @@ export class AetherComponent {
    */
 
   /**
+   * Set component state (simple merge) and return new state
+   * Included for parity with tests that simulate component updates.
+   * @param {object} partialState
+   * @returns {object} updated state
+   */
+  setState(partialState = {}) {
+    this.state = { ...(this.state || {}), ...partialState };
+    return this.state;
+  }
+
+  /**
    * Get current network state
    * @returns {object} Network state information
    */

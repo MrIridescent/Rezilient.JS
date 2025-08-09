@@ -95,6 +95,18 @@
     "terser": "^5.43.1"
   },
   "dependencies": {
-    "idb-keyval": "^6.2.2"
+    "idb-keyval": "^6.2.2",
+    "vite": "^7.0.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MrIridescent/Rezilient.JS.git"
+  },
+  "homepage": "https://github.com/MrIridescent/Rezilient.JS#readme",
+  "bugs": {
+    "url": "https://github.com/MrIridescent/Rezilient.JS/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
