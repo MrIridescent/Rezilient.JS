@@ -2,8 +2,8 @@
 
 > **Revolutionary framework for scaffolding complete production-ready REZILIENT applications**
 
-[![npm version](https://img.shields.io/npm/v/rezilient.js.svg)](https://www.npmjs.com/package/rezilient.js)
-[![npm downloads](https://img.shields.io/npm/dm/rezilient.js.svg)](https://www.npmjs.com/package/rezilient.js)
+[![npm version](https://img.shields.io/npm/v/%40mriridescent%2Frezilient.svg)](https://www.npmjs.com/package/@mriridescent/rezilient)
+[![npm downloads](https://img.shields.io/npm/dm/%40mriridescent%2Frezilient.svg)](https://www.npmjs.com/package/@mriridescent/rezilient)
 [![GitHub release](https://img.shields.io/github/v/release/MrIridescent/Rezilient.JS?display_name=tag&sort=semver)](https://github.com/MrIridescent/Rezilient.JS/releases)
 [![Release CI](https://github.com/MrIridescent/Rezilient.JS/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/MrIridescent/Rezilient.JS/actions/workflows/release.yml)
 [![bundle size](https://img.shields.io/bundlephobia/minzip/rezilient.js)](https://bundlephobia.com/package/rezilient.js)
@@ -79,7 +79,7 @@ REZILIENT.js sets new industry standards with revolutionary capabilities:
 ## 📦 Installation
 
 ```bash
-npm install rezilient.js
+npm install @mriridescent/rezilient
 ```
 
 ## 🏗️ Basic Usage
@@ -88,7 +88,7 @@ npm install rezilient.js
 
 ```jsx
 import React from 'react';
-import { AetherComponent, useAetherStore, initializeAether } from 'rezilient.js';
+import { AetherComponent, useAetherStore, initializeAether } from '@mriridescent/rezilient';
 
 // Initialize framework
 initializeAether({
@@ -120,7 +120,7 @@ class MyApp extends AetherComponent {
 ### Vanilla JavaScript
 
 ```javascript
-import { AetherComponent, AetherStore } from 'rezilient.js';
+import { AetherComponent, AetherStore } from '@mriridescent/rezilient';
 
 class MyApp extends AetherComponent {
   constructor() {
@@ -138,7 +138,7 @@ class MyApp extends AetherComponent {
 ### Node.js Backend
 
 ```javascript
-import { CarbonAwareScheduler, AetherPrinciples } from 'rezilient.js';
+import { CarbonAwareScheduler, AetherPrinciples } from '@mriridescent/rezilient';
 
 const scheduler = new CarbonAwareScheduler();
 
@@ -157,7 +157,7 @@ app.get('/api/data', async (req, res) => {
 
 ### AetherStore - REZILIENT State Management
 ```javascript
-import { AetherStore } from 'rezilient.js';
+import { AetherStore } from '@mriridescent/rezilient';
 
 const store = new AetherStore({ items: [] });
 
@@ -170,7 +170,7 @@ store.update(state => ({ ...state, items: [...state.items, newItem] }));
 
 ### PersistentStore - Offline-First Persistence
 ```javascript
-import { PersistentStore } from 'rezilient.js';
+import { PersistentStore } from '@mriridescent/rezilient';
 
 const store = new PersistentStore('user-data', { preferences: {} });
 
@@ -180,7 +180,7 @@ store.set({ preferences: { theme: 'dark' } });
 
 ### SyncEngine - Intelligent Synchronization
 ```javascript
-import { SyncEngine } from 'rezilient.js';
+import { SyncEngine } from '@mriridescent/rezilient';
 
 const sync = new SyncEngine({
   endpoint: '/api/sync',
@@ -195,7 +195,7 @@ sync.sync();
 ## 🌍 Carbon-Aware Computing
 
 ```javascript
-import { CarbonAwareScheduler } from 'rezilient.js';
+import { CarbonAwareScheduler } from '@mriridescent/rezilient';
 
 const scheduler = new CarbonAwareScheduler();
 
@@ -217,7 +217,7 @@ console.log(`Current carbon intensity: ${intensity}`);
 ## 🤖 AI-Bias Detection
 
 ```javascript
-import { AetherAIAware } from 'rezilient.js';
+import { AetherAIAware } from '@mriridescent/rezilient';
 
 const aiAware = new AetherAIAware();
 
@@ -235,7 +235,7 @@ if (result.hasBias) {
 ## 🔧 Configuration
 
 ```javascript
-import { initializeAether } from 'rezilient.js';
+import { initializeAether } from '@mriridescent/rezilient';
 
 initializeAether({
   // Carbon awareness
@@ -263,7 +263,7 @@ initializeAether({
 ## 📊 Production Monitoring
 
 ```javascript
-import { AetherPrinciples } from 'rezilient.js';
+import { AetherPrinciples } from '@mriridescent/rezilient';
 
 const principles = new AetherPrinciples();
 
