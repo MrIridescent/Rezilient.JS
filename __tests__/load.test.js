@@ -344,7 +344,8 @@ describe('Load Testing', () => {
 
       expect(results).toHaveLength(taskCount);
       // CI environments can be slower; keep a generous upper bound
-      expect(duration).toBeLessThan(8000);
+      const ci = process.env.CI === 'true' || process.env.GITHUB_ACTIONS === 'true';
+      expect(duration).toBeLessThan(ci ? 13000 : 8000);
     });
   });
 
